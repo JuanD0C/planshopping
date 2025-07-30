@@ -183,4 +183,6 @@ const plants = [
   }
 ]
 
+export const categories = ["Air Purifying", "Low Maintenance", "Medicinal","Aromatic Fragant", "Insect Repellent"]
+
 export default plants

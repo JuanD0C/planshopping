@@ -7,7 +7,6 @@ const landingSlice = createSlice({
   reducers:{
     toggleShow: (state,action)=>{
       state[0] = !state[0]
-      console.log("cambio a ",state)
     }
   }
 })

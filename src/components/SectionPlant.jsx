@@ -8,19 +8,24 @@ const SectionPlant = ({category, plants}) => {
   const dispatch = useDispatch()
   return (
     <>
-    <div className='category-header'>SectionPlant {category}</div>
-    {plants.map((planta,index)=>
-    <div key={index}>
-      <p>{planta.name}</p>
-      <p>${planta.cost}</p>
-      <p>{planta.description}</p>
-      {cartItems.find((plantCar)=>planta.name==plantCar.name)?
-      <button>added</button>
-      :
-      <button onClick={()=>dispatch(addToCart(planta))} >add to cart</button>
-      }
+    <div className="section">
+      <div className='section-header'>SectionPlant {category}</div>
+      <div className='card-container'>
+        {plants.map((planta,index)=>
+        <div key={index} className='product-card'>
+          <h3>{planta.name}</h3>
+          <img src={planta.image} alt={`imagen de ${planta.name}`} />
+          <p className='cost'>${planta.cost}</p>
+          <p>{planta.description}</p>
+          {cartItems.find((plantCar)=>planta.name==plantCar.name)?
+          <button className='disable'>added</button>
+          :
+          <button onClick={()=>dispatch(addToCart(planta))} className='able' >add to cart</button>
+          }
+        </div>
+        )}
+      </div>
     </div>
-    )}
     </>
   )
 }

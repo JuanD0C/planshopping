@@ -5,6 +5,7 @@ import { categories } from '../store/plantsData'
 import SectionPlant from './SectionPlant'
 import plants from '../store/plantsData'
 import Cart from './Cart'
+import './SectionSelection.css'
 
 const SectionSelection = () => {
   const [showCart,setShowCart] = useState(false)

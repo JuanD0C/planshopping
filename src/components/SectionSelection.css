@@ -1,0 +1,47 @@
+.navbar{
+  display: flex;
+  height: 70px;
+  background-color: #4caf50;
+  font-size: 25px;
+  color: white;
+  justify-content: space-between;
+}
+.backhome{
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  align-items: center;
+}
+.backhome div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.backhome p{
+  font-size: 15px;
+}
+.navbar img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.navbar-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-links a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carlink{
+  background-image: url('/src/assets/car.png');
+  background-size: contain;
+  background-position-x: -2px;
+  background-position-y: 1px;
+  width: 70px;
+  text-align: center;
+}

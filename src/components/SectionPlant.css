@@ -1,51 +1,73 @@
-.navbar{
+.section{
   display: flex;
-  height: 70px;
-  background-color: #4caf50;
-  font-size: 25px;
-  color: white;
-  justify-content: space-between;
-}
-.backhome{
-  display: flex;
-  gap: 5px;
-  cursor: pointer;
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color:#4caf4f83;
 }
-.backhome div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.backhome p{
-  font-size: 15px;
-}
-.navbar img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-.navbar-links{
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-.navbar-links a{
-  text-decoration: none;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.carlink{
-  background-image: url('/src/assets/car.png');
-  background-size: contain;
-  background-position-x: -2px;
-  background-position-y: 1px;
-  width: 70px;
+.section-header{
+  font-size: 25px;
+  font-weight: bold;
   text-align: center;
-  /* background-color: aqua; */
+  border: 1px black;
+  border-style: solid none solid none;
+  padding: 0 3%;
+  margin: 20px;
 }
-.category-header{
-  background-color: aqua;
+.card-container{
+  width: 100%;
+  padding: 0 3%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  
+}
+.product-card{
+  width: calc(33.33% - 20px*2/3); /* Adjust width for 3 cards per row with 20px gap */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+.product-card h3{
+  padding: 12px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.product-card img{
+  max-width: 100%;
+  height: 200px;
+}
+.product-card .cost {
+  color: #0e7a35;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.product-card p {
+  margin: 10px;
+  text-align: justify;
+  text-align-last: center;
+}
+.product-card button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: filter 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button.able{
+  background-color: #4caf50;
+}
+button.disable{
+  background-color: #e74c3c;
 }

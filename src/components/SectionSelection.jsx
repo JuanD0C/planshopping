@@ -14,22 +14,23 @@ const SectionSelection = () => {
     itemsCart.forEach(element => {
       items+=element.quantity
     });
-    items = items == 0 ? "" : items.toString()
+    items = items == 0 ? "0" : items.toString()
     return items
   }
   const dispatch = useDispatch()
   return (
     <>
-      <nav className='navbar' style={{backgroundColor: "green"}}>
-        <a onClick={() => dispatch(toggleShow())}>
-          <div>
-            <h3>Paradise Nursery</h3>
-            <i>Where Green Meets Serenity</i>
-          </div>
+      <nav className='navbar'>
+        <a onClick={() => dispatch(toggleShow())} className='backhome'>
+            <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="logo" />
+            <div>
+              <h3>Paradise Nursery</h3>
+              <p>Where Green Meets Serenity</p>
+            </div>
         </a>
-        <div>
+        <div className='navbar-links'>
             <a href="#" onClick={() => setShowCart(false)}>Plants</a>
-            <a href="#" onClick={() => setShowCart(true)}>carrito {numItems()}</a>
+            <a href="#" onClick={() => setShowCart(true)} className='carlink'>{numItems()}</a>
         </div>
       </nav>
       {showCart?

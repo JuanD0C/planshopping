@@ -6,10 +6,10 @@
   "homepage": "https://juand0c.github.io/planshopping/",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {

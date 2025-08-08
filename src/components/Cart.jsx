@@ -15,6 +15,10 @@ const Cart = () => {
     })
     return total
   }
+  const handleCheckout = () => {
+    alert('Functionality to be added for future reference');
+  };
+
   return (
     <div className='car-container'>
       <h1>Total cart amount: ${totalCost(cartItems)}</h1>
@@ -37,7 +41,7 @@ const Cart = () => {
           </div>
         </div>)}
       </div>
-      <button className='able'>
+      <button onClick={()=>handleCheckout()} className='able'>
         Checkout
       </button>
       <button onClick={()=>dispatch(toggleCar(false))} className='able'>

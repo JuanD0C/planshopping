@@ -3,13 +3,19 @@ import {createSlice} from "@reduxjs/toolkit"
 
 const landingSlice = createSlice({
   name: "land",
-  initialState: [false],
+  initialState: {
+    landing:true,
+    car:false
+  },
   reducers:{
     toggleShow: (state,action)=>{
-      state[0] = !state[0]
+      state["landing"] = !state["landing"]
+    },
+    toggleCar: (state,action)=>{
+      state["car"] = action.payload
     }
   }
 })
 
-export const {toggleShow} = landingSlice.actions
+export const {toggleShow, toggleCar} = landingSlice.actions
 export default landingSlice.reducer

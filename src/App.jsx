@@ -4,7 +4,7 @@ import './App.css'
 import SectionSelection from './components/SectionSelection'
 
 function App() {
-  const show = useSelector((state) => state.land[0])
+  const show = useSelector((state) => state.land["landing"])
   const dispatch = useDispatch()
 
   return (

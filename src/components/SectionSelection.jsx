@@ -6,9 +6,10 @@ import SectionPlant from './SectionPlant'
 import plants from '../store/plantsData'
 import Cart from './Cart'
 import './SectionSelection.css'
+import { toggleCar } from '../store/landingSlice'
 
 const SectionSelection = () => {
-  const [showCart,setShowCart] = useState(false)
+  const showCart = useSelector((state)=>state.land["car"])
   const itemsCart = useSelector((state)=>state.cart.items)
   const numItems = () => {
     let items = 0
@@ -30,8 +31,8 @@ const SectionSelection = () => {
             </div>
         </a>
         <div className='navbar-links'>
-            <a href="#" onClick={() => setShowCart(false)}>Plants</a>
-            <a href="#" onClick={() => setShowCart(true)} className='carlink'>{numItems()}</a>
+            <a href="#" onClick={() => dispatch(toggleCar(false))}>Plants</a>
+            <a href="#" onClick={() => dispatch(toggleCar(true))} className='carlink'>{numItems()}</a>
         </div>
       </nav>
       {showCart?
